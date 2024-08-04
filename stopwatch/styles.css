@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.stopwatch {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .stopwatch {
+    background-color: #333333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.time {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+.dark-mode .control-btn {
+    background-color: #bb86fc;
+}
+
+.dark-mode .control-btn:hover {
+    background-color: #9e6ffe;
+}
+
+.laps {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.lap {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .lap {
+    background-color: #444444;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.dark-mode .dark-mode-toggle {
+    background: linear-gradient(135deg, #424242, #616161);
+}
+
+.dark-mode-toggle::after {
+    content: '🌙';
+    font-size: 24px;
+    transition: content 0.3s;
+}
+
+.dark-mode .dark-mode-toggle::after {
+    content: '☀️';
+}
+
+.time {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.time .ms {
+    font-size: 0.5em;
+    color: #888;
+}
+
+.dark-mode .time .ms {
+    color: #aaa;
+}
